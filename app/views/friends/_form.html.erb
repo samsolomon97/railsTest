@@ -5,38 +5,41 @@
 
       <ul>
         <% friend.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <div class="alert alert-danger">
+            <li><%= error.full_message %></li>
+          </div>
+          
         <% end %>
       </ul>
     </div>
   <% end %>
 
   <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <%= form.label :first_name, class: "col-sm-2 col-form-label", style: "display: block" %>
+    <%= form.text_field :first_name, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+    <%= form.label :last_name, class: "col-sm-2 col-form-label", style: "display: block" %>
+    <%= form.text_field :last_name, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :email_address, style: "display: block" %>
-    <%= form.text_field :email_address %>
+    <%= form.label :email_address, class: "col-sm-2 col-form-label", style: "display: block" %>
+    <%= form.text_field :email_address, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.number_field :phone %>
+    <%= form.label :phone, class: "col-sm-2 col-form-label", style: "display: block" %>
+    <%= form.number_field :phone, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :friends_since, style: "display: block" %>
-    <%= form.date_field :friends_since %>
+    <%= form.label :friends_since, class: "col-sm-2 col-form-label", style: "display: block" %>
+    <%= form.date_field :friends_since, class: "form-control" %>
   </div>
   </br>
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-outline-dark"%>
   </div>
 <% end %>
