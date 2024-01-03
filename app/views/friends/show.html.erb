@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      ...
+    </thead>
+    <tbody>
+      ...
+    </tbody>
+    <tfoot>
+      ...
+    </tfoot>
+  </table>
+</div>
+<%= render @friend %>
+
+<div>
+  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
+  <%= link_to "Back to friends", friends_path %>
+
+  <%= button_to "Destroy this friend", @friend, method: :delete %>
+</div>
