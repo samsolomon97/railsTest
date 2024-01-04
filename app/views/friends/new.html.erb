@@ -1,9 +1,11 @@
 <h1>Add New Friend</h1>
 
-<%= render "form", friend: @friend %>
+<div class="bg-body-secondary shadow p-3 mb-5 bg-body-tertiary rounded border">
+  <%= render "form", friend: @friend %>
+</div>
 
 <br>
 
 <div>
-  <%= link_to "Back to friends", friends_path %>
+  <%= link_to "Back to friends", friends_path, class: "btn btn-outline-dark"%>
 </div>

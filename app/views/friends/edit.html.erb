@@ -1,10 +1,8 @@
-<h1>Editing friend</h1>
-
-<%= render "form", friend: @friend %>
-
+<h1>Edit Friend</h1>
+<div class="bg-body-secondary shadow p-3 mb-5 bg-body-tertiary rounded border">
+  <%= render "form", friend: @friend %>
+</div>
 <br>
 
-<div>
-  <%= link_to "Show this friend", @friend %> |
-  <%= link_to "Back to friends", friends_path %>
-</div>
+<%= link_to "Show this friend", @friend, class: "btn btn-outline-dark" %> 
+<%= link_to "Back to friends", friends_path, class: "btn btn-outline-dark" %>

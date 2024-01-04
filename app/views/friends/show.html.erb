@@ -1,23 +1,16 @@
-<p style="color: green"><%= notice %></p>
+</br>
+<% if notice %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= notice %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
 
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      ...
-    </thead>
-    <tbody>
-      ...
-    </tbody>
-    <tfoot>
-      ...
-    </tfoot>
-  </table>
+<div class="bg-body-secondary shadow p-3 mb-5 bg-body-tertiary rounded border">
+  <%= render @friend %>
 </div>
-<%= render @friend %>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
-  <%= link_to "Back to friends", friends_path %>
-
-  <%= button_to "Destroy this friend", @friend, method: :delete %>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-outline-dark" %> 
+  <%= link_to "Back to friends", friends_path , class: "btn btn-outline-dark"%>
 </div>

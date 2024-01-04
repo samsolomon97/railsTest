@@ -1,4 +1,12 @@
-<p style="color: green"><%= notice %></p>
+</br>
+<% if notice %>
+  <% if notice %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= notice %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+<% end %>
 
 
 <div id="friends">
@@ -22,9 +30,9 @@
         <td><%=  friend.phone %></td>
         <td><%=  friend.friends_since %></td>
         
-        <td><%= link_to "View", friend %></td>
-        <td><%= link_to "Edit", edit_friend_path(friend) %></td>
-        <td><%= link_to "Delete", @friend, method: :delete %></td>
+        <td><%= link_to "View", friend, class: "btn btn-light border btn-sm" %></td>
+        <td><%= link_to "Edit", edit_friend_path(friend), class: "btn btn-light border btn-sm"  %></td>
+        <td><%= button_to "delete", friend, class: "btn btn-light border btn-sm", data: { confirm: 'Are you sure?' }, method: :delete %></td>
       </tr>
       <% end %>
     </tbody>
